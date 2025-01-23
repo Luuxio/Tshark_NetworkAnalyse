@@ -1,0 +1,25 @@
+{
+  "name": "tshark_networkanalyse",
+  "version": "0.1.0",
+  "description": "Application web pour analyser son réseau",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon ./backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luuxio/Tshark_NetworkAnalyse.git"
+  },
+  "author": "Luuxio_",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Luuxio/Tshark_NetworkAnalyse:/issues"
+  },
+  "homepage": "https://github.com/Luuxio/Tshark_NetworkAnalyse:#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

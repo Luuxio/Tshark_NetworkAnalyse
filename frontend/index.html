@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #data {
+            white-space: pre-wrap;
+            background-color: #f4f4f4;
+            padding: 10px;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Capture des paquets réseau</h1>
+    <button id="loadData">Charger les données</button>
+    <div id="data"></div>
+    <script>
+        document.getElementById("data").addEventListener("click", () => {
+            fetch('/capture')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("data").textContent = JSON.stringify(data, null, 4);
+                })
+                .catch(error => console.error('Erreur : ', error));
+        })
+    </script>
+</body>
+
+</html>

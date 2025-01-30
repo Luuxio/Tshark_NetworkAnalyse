@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capture de Paquets Réseau</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        #loading {
+            font-size: 20px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <h1>Capture en Temps Réel des Paquets Réseau</h1>
+    <p id="loading">Chargement des paquets...</p>
+    <table>
+        <thead>
+            <tr>
+                <th>IP Source</th>
+                <th>IP Destination</th>
+                <th>Port Source UDP</th>
+                <th>Port Destination UDP</th>
+            </tr>
+        </thead>
+        <tbody id="packets-table-body">
+        </tbody>
+    </table>
+    
+    <script src="app.js"></script>
+</body>
+</html>
